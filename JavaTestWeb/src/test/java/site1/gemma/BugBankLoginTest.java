@@ -1,20 +1,14 @@
 package site1.gemma;
 
-
-import org.junit.jupiter.api.Test;
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
-
-//import static org.junit.jupiter.api.Assertions.*;
 
 public class BugBankLoginTest {
 
@@ -28,7 +22,7 @@ public class BugBankLoginTest {
         driver.get("https://bugbank.netlify.app/");
     }
 
-    @Test //(description = "Verify page structure")
+    @Test(description = "Verify page structure")
     public void verifyPageStructure() {
         WebElement leftColumnText = driver.findElement(By.cssSelector(".left-column"));
         WebElement rightColumnElements = driver.findElement(By.cssSelector(".right-column"));
@@ -36,7 +30,7 @@ public class BugBankLoginTest {
         Assert.assertTrue(rightColumnElements.isDisplayed(), "Right column elements are not displayed.");
     }
 
-    @Test //(description = "Test successful login")
+    @Test(description = "Test successful login")
     public void testSuccessfulLogin() {
         driver.findElement(By.id("emailField")).sendKeys("valid_email@example.com");
         driver.findElement(By.id("passwordField")).sendKeys("valid_password");
@@ -44,7 +38,7 @@ public class BugBankLoginTest {
         // Assertion for successful login will be added once the application is updated to provide a success message or redirect to a different page.
     }
 
-    @Test //(description = "Test login failure with incorrect email and password")
+    @Test(description = "Test login failure with incorrect email and password")
     public void testLoginFailure() {
         driver.findElement(By.id("emailField")).sendKeys("invalid_email");
         driver.findElement(By.id("passwordField")).sendKeys("invalid_password");
@@ -53,13 +47,13 @@ public class BugBankLoginTest {
         Assert.assertTrue(errorMessage.isDisplayed(), "Error message is not displayed.");
     }
 
-    @Test //(description = "Test redirection to the registration page or modal")
+    @Test(description = "Test redirection to the registration page or modal")
     public void testRegistration() {
         driver.findElement(By.id("registrarButton")).click();
         // Assertion for successful redirection will be added once the application is updated to provide a confirmation of redirect.
     }
 
-    @Test //(description = "Verify the 'Meet our requirements' text is displayed")
+    @Test(description = "Verify the 'Meet our requirements' text is displayed")
     public void verifyRequirementsText() {
         WebElement requirementsText = driver.findElement(By.cssSelector(".requirements-text"));
         Assert.assertTrue(requirementsText.isDisplayed(), "Requirement text is not displayed.");

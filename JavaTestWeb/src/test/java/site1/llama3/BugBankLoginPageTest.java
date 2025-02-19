@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 public class BugBankLoginPageTest {
 
@@ -15,7 +15,7 @@ public class BugBankLoginPageTest {
     @BeforeTest
     public void setup() {
         // Set up the ChromeDriver
-        System.setProperty("webdriver.chrome.driver", "src/drive/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src\\drive\\chromedriver.exe");
         driver = new ChromeDriver();
     }
 
@@ -103,5 +103,3 @@ Note:
 
 Please adjust the code as per your specific requirements and environment.
 */
-
-
