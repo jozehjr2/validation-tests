@@ -3,16 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="site2.llama3.LoginPageTest">
+      <class name="site2.modificado.LoginPageTest">
         <methods>
+          <include name="testInvalidLogin"/>
+          <include name="testForgotPasswordRedirection"/>
+          <include name="testSocialMediaRedirection"/>
+          <include name="navigateToLoginPage"/>
+          <include name="testSuccessfulLogin"/>
+          <include name="tearDown"/>
           <include name="testPageStructure"/>
-          <include name="testCreateAccountLink"/>
-          <include name="testLoginButton"/>
-          <include name="testForgotPasswordLink"/>
-          <include name="testSocialMediaIcons"/>
+          <include name="testCreateAccountRedirection"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- site2.llama3.LoginPageTest -->
+      </class> <!-- site2.modificado.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
