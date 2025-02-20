@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="site3.gpt4.SauceDemoLoginTestDescribedImage">
+      <class name="site2.llama3.LoginPageTest">
         <methods>
-          <include name="testSuccessfulLogin"/>
-          <include name="tearDown"/>
-          <include name="testLoginFailure"/>
-          <include name="verifyPageStructure"/>
-          <include name="testErrorMessages"/>
+          <include name="testPageStructure"/>
+          <include name="testCreateAccountLink"/>
+          <include name="testLoginButton"/>
+          <include name="testForgotPasswordLink"/>
+          <include name="testSocialMediaIcons"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- site3.gpt4.SauceDemoLoginTestDescribedImage -->
+      </class> <!-- site2.llama3.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
